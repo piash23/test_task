@@ -9,6 +9,9 @@ class Parent(models.Model):
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
 
 class Child(models.Model):
     first_name = models.CharField(max_length=100)
